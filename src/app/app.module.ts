@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NidhalComponent } from './nidhal/nidhal.component';
 import { FormsModule } from '@angular/forms';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NidhalComponent
+    NidhalComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
