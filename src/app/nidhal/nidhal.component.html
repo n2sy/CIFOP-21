@@ -1,0 +1,9 @@
+<h3> Je m'appelle {{ name }} </h3>
+
+<div [hidden]="hd" [style.backgroundColor]="color">
+    CIFOP
+</div>
+<br>
+<input [(ngModel)]="name" type="text" class="form-control">
+<br>
+<button (click)="showAlert()" class="btn btn-danger">Show Alert</button>
