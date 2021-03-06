@@ -1,8 +1,9 @@
+<h3><ng-content></ng-content></h3>
 <div class="row">
     <div class="col-md-5">
-        <app-liste></app-liste>
+        <app-liste (sendPersToCv)="RecupPers($event)" [lstPersonne]="listPersonne" ></app-liste>
     </div>
     <div class="col-md-7">
-        <app-detail></app-detail>
+        <app-detail [selectedPers]="persSelected" ></app-detail>
     </div>
 </div>

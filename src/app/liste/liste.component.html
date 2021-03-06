@@ -1,5 +1,5 @@
 <ol class="list-group-item">
-    <app-item></app-item>
-    <app-item></app-item>
-    <app-item></app-item>
+    <app-item *ngFor="let p of lstPersonne" (sendPers)="RecupePers($event)" [pers]="p" ></app-item>
+    <!-- <app-item (sendPers)="RecupePers($event)" [pers]="lstPersonne[1]"></app-item>
+    <app-item (sendPers)="RecupePers($event)" [pers]="lstPersonne[2]"></app-item> -->
 </ol>
