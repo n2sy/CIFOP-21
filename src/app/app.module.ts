@@ -15,6 +15,13 @@ import { MsWordComponent } from './ms-word/ms-word.component';
 import { CustomDirDirective } from './custom-dir.directive';
 import { ManageServersComponent } from './manage-servers/manage-servers.component';
 import { ShortPipe } from './pipes/short.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FirstService } from './services/first.service';
+import { NoImagePipe } from './no-image.pipe';
+import { RecrueComponent } from './recrue/recrue.component';
+import { HomeAccountComponent } from './accounts/home-account/home-account.component';
+import { AddAccountComponent } from './accounts/add-account/add-account.component';
+import { ListAccountComponent } from './accounts/list-account/list-account.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +37,13 @@ import { ShortPipe } from './pipes/short.pipe';
     MsWordComponent,
     CustomDirDirective,
     ManageServersComponent,
-    ShortPipe
+    ShortPipe,
+    FilterPipe,
+    NoImagePipe,
+    RecrueComponent,
+    HomeAccountComponent,
+    AddAccountComponent,
+    ListAccountComponent
   ],
   imports: [
     BrowserModule,

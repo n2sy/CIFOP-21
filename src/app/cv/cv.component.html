@@ -1,9 +1,11 @@
 <h3><ng-content></ng-content></h3>
 <div class="row">
     <div class="col-md-5">
-        <app-liste (sendPersToCv)="RecupPers($event)" [lstPersonne]="listPersonne" ></app-liste>
+        <app-liste (sendPersToCv)="RecupPers($event)"></app-liste>
     </div>
     <div class="col-md-7">
         <app-detail [selectedPers]="persSelected" ></app-detail>
     </div>
+    <!-- <button (click)="showList()" class="btn btn-primary">Show LIST FROM CV</button>
+    <button (click)="addNewPerson()" class="btn btn-success">Add Person</button> -->
 </div>

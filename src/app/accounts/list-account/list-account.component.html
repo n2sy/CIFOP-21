@@ -1,0 +1,11 @@
+<ol class="list-group">
+    <li class="list-group-item" *ngFor="let acc of tabAccounts; let i = index">
+        <strong>{{acc.name}}</strong><br>
+        <hr>
+        <p>This account is {{ acc.type }} </p><br>
+        <button (click)="changeType(i, 'active')" class="btn btn-success">Set to 'active'</button>
+        <button (click)="changeType(i, 'inactive')" class="btn btn-primary">Set to 'inactive'</button>
+        <button (click)="changeType(i, 'unknown')" class="btn btn-danger">Set to 'unknown'</button>
+
+    </li>
+</ol>

@@ -1,0 +1,9 @@
+<div style="border: 1px solid black;">
+    Account Name : <br>
+    <input [(ngModel)]="name" type="text" class="form-control">
+    <select class="form-control" [(ngModel)]="type">
+        <option *ngFor="let acc of typeAccounts" [value]="acc">{{acc}}</option>
+    </select>
+    <button (click)="addNewAccount()" class="btn btn-primary">Add Account</button>
+
+</div>

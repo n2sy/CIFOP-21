@@ -14,6 +14,14 @@ export class ManageServersComponent implements OnInit {
     new Serveur("Nidhal Server", "small", "stable", new Date(2020, 1, 14))
   ];
 
+  selectedStatus : string = "";
+
+  myPromise = new Promise((resolve, reject) => {
+    setTimeout(()=> {
+      resolve("KAMEL")
+    },3000)
+  })
+
   constructor() { }
 
   ngOnInit(): void {
@@ -27,6 +35,12 @@ export class ManageServersComponent implements OnInit {
     }
 
 
+  }
+
+  addServer() {
+    this.listServeurs.push(
+      new Serveur("New New Server", "small", "stable", new Date(2020, 1, 14))
+    )
   }
 
 }
