@@ -22,6 +22,14 @@ import { RecrueComponent } from './recrue/recrue.component';
 import { HomeAccountComponent } from './accounts/home-account/home-account.component';
 import { AddAccountComponent } from './accounts/add-account/add-account.component';
 import { ListAccountComponent } from './accounts/list-account/list-account.component';
+import { HomeComponent } from './home/home.component';
+import { CIFOP_ROUTING } from './app.routing';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AddComponent } from './add/add.component';
+import { InfosComponent } from './infos/infos.component';
+import { UpdateComponent } from './update/update.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { NidhalModule } from './nidhal/nidhal.module';
 
 @NgModule({
   declarations: [
@@ -43,11 +51,19 @@ import { ListAccountComponent } from './accounts/list-account/list-account.compo
     RecrueComponent,
     HomeAccountComponent,
     AddAccountComponent,
-    ListAccountComponent
+    ListAccountComponent,
+    HomeComponent,
+    NavbarComponent,
+    AddComponent,
+    InfosComponent,
+    UpdateComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    CIFOP_ROUTING,
+    NidhalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

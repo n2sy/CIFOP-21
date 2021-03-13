@@ -15,4 +15,8 @@ export class ListPersonnesService {
   getListPersonnes() {
     return this.listPersonne;
   }
+
+  getPersonneById(id) {
+    return this.listPersonne.find(p => p.id == id)
+  }
 }
