@@ -3,7 +3,10 @@
       <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['cv']" routerLinkActive="active">CV</a>
+      <a class="nav-link" [routerLink]="['cv']" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">CV</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['cv/add']" routerLinkActive="active">Add CV</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" [routerLink]="['servers']" routerLinkActive="active">Servers</a>

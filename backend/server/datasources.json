@@ -1,0 +1,14 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "nidhaldb" : {
+    "host" : "localhost",
+    "port" : 8889,
+    "user" : "root",
+    "password" : "root",
+    "database" : "cvproject",
+    "connector" : "mysql"
+  }
+}

@@ -32,6 +32,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NidhalModule } from './nidhal/nidhal.module';
 import { HomeProjectComponent } from './home-project/home-project.component';
 import { LoginComponent } from './login/login.component';
+import { HttpComponent } from './http/http.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -61,13 +63,15 @@ import { LoginComponent } from './login/login.component';
     UpdateComponent,
     NotFoundComponent,
     HomeProjectComponent,
-    LoginComponent
+    LoginComponent,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     CIFOP_ROUTING,
-    NidhalModule
+    NidhalModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
