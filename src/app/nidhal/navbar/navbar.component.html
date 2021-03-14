@@ -1,11 +1,12 @@
 <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Accueil</a>
+      <a class="nav-link" routerLink="/nidhal/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Accueil</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['serveurs']" routerLinkActive="active">Serveurs</a>
+      <a class="nav-link" [routerLink]="['/nidhal', 'serveurs']" routerLinkActive="active">Serveurs</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['utilisateurs']" routerLinkActive="active">Utilisateurs</a>
+      <a class="nav-link" [routerLink]="['/nidhal', 'utilisateurs']" routerLinkActive="active">Utilisateurs</a>
     </li>
   </ul>
+<router-outlet></router-outlet>

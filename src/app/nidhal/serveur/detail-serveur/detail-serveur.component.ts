@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ListServeursService } from '../../list-serveurs.service';
 
 @Component({
@@ -11,6 +11,7 @@ export class DetailServeurComponent implements OnInit {
   myServeur;
   hd : boolean;
   constructor(private activatedRoute : ActivatedRoute,
+    private router : Router,
     private lstService : ListServeursService) { }
 
   ngOnInit(): void {
@@ -25,6 +26,11 @@ export class DetailServeurComponent implements OnInit {
         this.hd = q['allowEdit']==1 ? false : true;
       }
     )
+  }
+
+  goToEdit() {
+    this.router.navigate(['nidhal', 'serveurs', this.myServeur.id, 'edit'])
+
   }
 
 }

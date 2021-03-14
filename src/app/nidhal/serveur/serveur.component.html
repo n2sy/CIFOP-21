@@ -4,7 +4,7 @@
             <div class="list-group">
                 <a class="list-group-item"
                 *ngFor="let serv of tab"
-                [routerLink]="['/serveurs', serv.id]"
+                [routerLink]="['/nidhal/serveurs', serv.id]"
                 [queryParams]="{allowEdit : serv.id == 3 ? 1 : 0}">
                 {{ serv.name }}
 

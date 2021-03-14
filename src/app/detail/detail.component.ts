@@ -21,7 +21,7 @@ export class DetailComponent implements OnInit {
   }
 
   goToInfos() {
-    this.router.navigate(['cv', this.selectedPers.id])
+    this.router.navigate(['project', 'cv', this.selectedPers.id])
   }
 
 }

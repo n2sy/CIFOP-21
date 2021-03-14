@@ -1,0 +1,49 @@
+<form #f="ngForm" (ngSubmit)="seConnecter(f)">
+    <div *ngIf="pass" class="alert alert-info">Email ou/et Mot de passe invalide(s)</div>
+
+
+    <!-- <input ngModel #farah="ngModel" required minlength="6" pattern="nidhall" type="text" class="form-control" name="extra">
+    <div class="alert alert-danger">
+        <p *ngIf="farah.errors.required">Ce champ est obligatoire</p>
+        <p *ngIf="farah.errors.minlength">Le nbre minimum de caractères est 6</p>
+        <p *ngIf="farah.errors.pattern">Le pattern est "nidhal jelassi"</p>
+    </div> -->
+    
+    
+    <!-- <div #cred="ngModelGroup" ngModelGroup="credentials" name="credentials"> -->
+        <label for="login">Login / Email</label>
+        <input ngModel #login="ngModel" required email type="email" class="form-control" id="login" name="login">
+
+        <!-- <div *ngIf="login.invalid && login.touched" class="alert alert-danger">Veuillez saisir une adresse mail valide !
+        </div> -->
+        <label for="pwd">Mot de passe</label>
+        <input ngModel required minlength="6" #pwd="ngModel" type="text" class="form-control" id="pwd" name="pwd">
+        <br>
+        <button [disabled]="f.invalid" class="btn btn-primary" type='submit'>Valider</button>
+    <!-- </div>
+
+    <div *ngIf="cred.invalid && cred.touched" class="alert alert-info">Email ou/et Mot de passe invalide(s)</div>
+
+
+    <br>
+    <label for="section">Section</label>
+    <select ngModel [ngModel]="defaultSection" name="section" id="section" class="form-control">
+        <option value="gl">Génie Logiciel</option>
+        <option value="dm">Développement mobile</option>
+        <option value="dsen">Data Science</option>
+    </select>
+    <br>
+    <label></label>
+    <input [(ngModel)]="myComment" type="text" class="form-control" name="comment">
+    {{ myComment }}
+    <br>
+   
+    <br>
+    <button (click)="resetForm(f)" class="btn btn-danger">Reset</button> <br>
+    <button (click)="resetFormv2(f)" class="btn btn-danger">Reset 2</button>
+
+    <pre>
+        {{ f.value | json }}
+      
+    </pre> -->
+</form>

@@ -30,6 +30,8 @@ import { InfosComponent } from './infos/infos.component';
 import { UpdateComponent } from './update/update.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NidhalModule } from './nidhal/nidhal.module';
+import { HomeProjectComponent } from './home-project/home-project.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import { NidhalModule } from './nidhal/nidhal.module';
     AddComponent,
     InfosComponent,
     UpdateComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HomeProjectComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

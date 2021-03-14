@@ -3,7 +3,7 @@
 <p>Le statut du serveur est {{ myServeur.status }} </p>
 <br>
 
-<button [disabled]="hd" class="btn btn-primary">Editer</button>
+<button (click)="goToEdit()" [disabled]="hd" class="btn btn-primary">Editer</button>
 <br>
 <br>
 <i *ngIf="hd">Impossible d'editer ce serveur</i>

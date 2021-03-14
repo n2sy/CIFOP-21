@@ -1,1 +1,10 @@
-<p>edit-serveur works!</p>
+Name : <br>
+<input [(ngModel)]="selectedServeur.name" type="" class="form-control">
+
+Status : <br>
+<select class="form-control" [(ngModel)]="selectedServeur.status">
+    <option value="online">Online</option>
+    <option value="offline">Offline</option>
+</select>
+
+<button (click)="goToDetails()" class="btn btn-danger">Back to Details</button>

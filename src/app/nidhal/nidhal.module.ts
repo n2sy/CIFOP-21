@@ -6,6 +6,7 @@ import { EditServeurComponent } from './serveur/edit-serveur/edit-serveur.compon
 import { DetailServeurComponent } from './serveur/detail-serveur/detail-serveur.component';
 import { SERV_ROUTING } from './nidhal.routing';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,6 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   declarations: [AccueilComponent, ServeurComponent, EditServeurComponent, DetailServeurComponent, NavbarComponent],
   imports: [
     CommonModule,
+    FormsModule,
     SERV_ROUTING
   ]
 })
