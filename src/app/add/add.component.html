@@ -1,4 +1,5 @@
 <div class="container">
+    <div *ngIf="erreur" class="alert alert-danger">Vous n'avez pas les autorisations nécessaires</div>
     <form #f="ngForm" (ngSubmit)="addNewPerson(f.value)">
         <label for="prenom">Prénom</label>
         <input ngModel required type="text" class="form-control" id="prenom" name="prenom">

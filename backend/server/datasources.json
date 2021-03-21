@@ -3,12 +3,13 @@
     "name": "db",
     "connector": "memory"
   },
-  "nidhaldb" : {
-    "host" : "localhost",
-    "port" : 8889,
-    "user" : "root",
-    "password" : "root",
-    "database" : "cvproject",
-    "connector" : "mysql"
+  "nidhaldb": {
+    "host": "localhost",
+    "port": 8889,
+    "database": "cvproject",
+    "password": "root",
+    "name": "nidhaldb",
+    "user": "root",
+    "connector": "mysql"
   }
 }

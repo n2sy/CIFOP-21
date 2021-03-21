@@ -5,7 +5,7 @@
     <li class="nav-item">
       <a class="nav-link" [routerLink]="['cv']" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">CV</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" *ngIf="authService.isLogged()">
       <a class="nav-link" [routerLink]="['cv/add']" routerLinkActive="active">Add CV</a>
     </li>
     <li class="nav-item">
@@ -14,4 +14,12 @@
     <li class="nav-item">
       <a class="nav-link" [routerLink]="['msword']" routerLinkActive="active">Ms-Word</a>
     </li>
+    <li class="nav-item" *ngIf="!authService.isLogged()">
+      <a class="nav-link" [routerLink]="['login']" routerLinkActive="active">Login</a>
+    </li>
+    <li class="nav-item" *ngIf="authService.isLogged()">
+      <a class="nav-link" (click)="seDeconnecter()" routerLinkActive="active">Logout</a>
+    </li>
   </ul>
+
+  <app-search></app-search>

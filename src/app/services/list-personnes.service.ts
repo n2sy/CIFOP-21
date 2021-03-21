@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Personne } from '../models/personne';
@@ -40,6 +40,16 @@ export class ListPersonnesService {
     this.listPersonne.push(newP);    
   }
 
+  addPersonneAPI(newP) : Observable<Object> {
+    // let token = localStorage.getItem("mytoken");
+    // if(token) {
+    //   //let headerReq = new HttpHeaders({authorization : 'bearer ' + token});
+    //   let p = new HttpParams().set('access_token', token);
+    //   return this.http.post<Object>(this.link, newP, {params : p})
+    // }
+    return this.http.post<Object>(this.link, newP)
+  }
+
   updatePersonne(p) {
     let pers = this.getPersonneById(p.id)
     let i = this.listPersonne.indexOf(pers);
@@ -59,5 +69,11 @@ export class ListPersonnesService {
   deletePersonAPI(id) {
     return this.http.delete(`${this.link}/${id}`);
 
+  }
+
+  getPersonBySubname(subname) : Observable<Personne[]> {
+    const filterValue = `{"where":{"nom":{"like" : "%${subname}%"}}}`
+    let p = new HttpParams().set('filter', filterValue);
+    return this.http.get<Personne[]>(this.link, {params : p});
   }
 }

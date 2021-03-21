@@ -34,6 +34,10 @@ import { HomeProjectComponent } from './home-project/home-project.component';
 import { LoginComponent } from './login/login.component';
 import { HttpComponent } from './http/http.component';
 import {HttpClientModule} from '@angular/common/http';
+import { loginInterceptorProvider } from './login.interceptor';
+import { LoginGuard } from './login.guard';
+import { LogoutGuard } from './logout.guard';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +68,8 @@ import {HttpClientModule} from '@angular/common/http';
     NotFoundComponent,
     HomeProjectComponent,
     LoginComponent,
-    HttpComponent
+    HttpComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +78,7 @@ import {HttpClientModule} from '@angular/common/http';
     NidhalModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [loginInterceptorProvider, LoginGuard, LogoutGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
